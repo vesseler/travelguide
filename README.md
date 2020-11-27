@@ -1,21 +1,6 @@
-# liupanshui
+基于vue框架的旅游指南。
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+六盘水市。
+欢迎来到六盘水
+🌞🌞🌞🌲🌳🌴🌵🌾🌿🍀🌞🌞🌞
+一个被称为中国凉都的城市，这可不是浪得虚名的，毕竟年均气温19c°🍺🍺🍺，19度的夏天，360度的热情。
