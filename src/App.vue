@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    hone
+    
+    <router-view></router-view>
+
   </div>
 </template>
 
