@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home">
         <!-- 三种写法都行 -->
         <!-- <HomeHeader></HomeHeader> -->
         <!-- <HomeHeader /> -->
@@ -25,7 +25,8 @@ export default {
     data() {
         return {
             swiperList: [],
-            iconsList: []
+            iconsList: [],
+            // hotList: []
         }
     },
     mounted() {
@@ -34,10 +35,13 @@ export default {
             const data = res.data.data[0];
             this.swiperList = data.swiperList;
             this.iconsList = data.iconsList;
+            // this.hotList = data.hotList;
         })
     }
 }
 </script>
 <style>
-
+.home {
+    background: #f5f5f5;
+}
 </style>

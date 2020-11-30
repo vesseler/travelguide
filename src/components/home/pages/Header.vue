@@ -1,20 +1,21 @@
 <template>
     <div class="header">
-        <div class="header-left">
-            <span class="iconfont">&#xe659;</span>
-        </div>
         <div class="header-search">
             <span class="iconfont">&#xe70b;</span>
             输入城市/景点/游玩主题
         </div>
-        <div class="header-right">
+        <div class="header-right" @click="toCity">
             北京<span class="iconfont" style="font-size:.2rem">&#xe64a;</span>
         </div>
     </div>
 </template>
 <script>
 export default {
-    
+    methods: {
+        toCity() {
+            this.$router.push("/City")
+        }
+    }
 }
 </script>
 
@@ -30,17 +31,12 @@ export default {
         font-size: .36rem;
         display: flex;
     }
-    .header-left {
-        width: .4rem;
-        padding: 0 .34rem;
-        text-align: center;
-        font-weight: bold;
-    }
+    
     .header-search {
         flex: 1;
         background: #fff;
         height: .6rem;
-        margin: .15rem 0;
+        margin: .15rem 0 .15rem .3rem;
         border-radius: .1rem;
         color: #e4e7ea;
         line-height: .6rem;
@@ -50,6 +46,6 @@ export default {
     }
     .header-right {
         font-size: .3rem;
-        padding: 0 .2rem;
+        padding: 0 .3rem;
     }
 </style>

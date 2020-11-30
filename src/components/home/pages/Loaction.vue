@@ -12,8 +12,8 @@
 </template>
 <script>
 export default {
-    
-}
+        
+    }
 </script>
 <style scoped>
     .loaction {
@@ -26,6 +26,5 @@ export default {
         text-align: center;
         /* background: red; */
         line-height: .8rem;
-
     }
 </style>

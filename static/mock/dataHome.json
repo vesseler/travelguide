@@ -65,7 +65,18 @@
                 }    
             ],
             "leftimg":"https://www.easyicon.net/api/resizeApi.php?id=1286132&size=128",
-            "rightimg":"https://static.easyicon.net/preview/126/1269473.gif"
+            "rightimg":"https://static.easyicon.net/preview/126/1269473.gif",
+            "hotList":[
+                {"id":1,"loaction":"北京"},
+                {"id":2,"loaction":"上海"},
+                {"id":3,"loaction":"南京"},
+                {"id":4,"loaction":"深圳"},
+                {"id":5,"loaction":"贵阳"},
+                {"id":6,"loaction":"乌鲁木齐"},
+                {"id":7,"loaction":"成都"},
+                {"id":8,"loaction":"重庆"},
+                {"id":9,"loaction":"六盘水"}
+            ]
 
         },
         {

@@ -6,6 +6,7 @@ import router from './router'
 import 'csss/var.styl'
 
 //js
+//按钮点击的默认的延迟取消
 import FastClick from 'fastclick'
 FastClick.attach(document.body);
 
@@ -24,6 +25,14 @@ Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 import axios from 'axios'
 Vue.prototype.$http = axios
 
+//view' star
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
+
+// Vue.use(VueRouter);
+Vue.use(ViewUI);
+
+//ViewUI end
 
 Vue.config.productionTip = false
 
