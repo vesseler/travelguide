@@ -4,41 +4,39 @@
             <swiper-slide v-for="itme in swiperList" :key="itme.id">
                 <img :src="itme.imgUrl" :alt="itme.alts">
             </swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
+            <!-- <div class="swiper-pagination" slot="pagination"></div> -->
         </swiper>
     </div>
   
 </template>
 
 <script>
+// import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   export default {
+    props:['swiperList'],
+    // name: 'carrousel',
+    // components: {
+    //   Swiper,
+    //   SwiperSlide
+    // },
     data() {
       return {
-            swiperList: [
-                {id:"1",imgUrl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606552744656&di=7226df493da399a35a2feaf9e6c36599&imgtype=0&src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201902%2F20190225201335262323.png",alts:"图片未加载..."},
-                {id:"2",imgUrl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606552744656&di=7226df493da399a35a2feaf9e6c36599&imgtype=0&src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201902%2F20190225201335262323.png",alts:"图片未加载..."},
-                // {id:"2",imgUrl:"csss/img/swiper2.png",alts:"图片未加载..."},
-                // {id:"3",imgUrl:"csss/img/swiper3.png",alts:"图片未加载..."}
-            ],
-            
-            swiperOptions: {
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: "custom",
-                    // clickable:true
-                },
-                loop:true,
-                // freeMode:true,
-                // watchSlidesProgress:true
-                // Some Swiper option/callback...
-            }
+        swiperOptions: {
+        //   pagination: {
+        //     el: '.swiper-pagination'
+        //   },
+          loop:true
+          // Some Swiper option/callback...
+        }
       }
     },
     computed: {
-      
+    //   swiper() {
+    //     return this.$refs.mySwiper.$swiper
+    //   }
     },
     mounted() {
-     
+
     }
   }
 </script>
