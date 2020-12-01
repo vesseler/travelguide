@@ -2,7 +2,8 @@
     <div class="header-swiper" >
         <swiper ref="mySwiper" :options="swiperOptions">
             <swiper-slide v-for="itme in swiperList" :key="itme.id">
-                <img :src="itme.imgUrl" :alt="itme.alts">
+                <img :src="itme.imgUrl" :alt="itme.alts" 
+                @click="toDetail">
             </swiper-slide>
             <!-- <div class="swiper-pagination" slot="pagination"></div> -->
         </swiper>
@@ -37,6 +38,11 @@
     },
     mounted() {
 
+    },
+    methods: {
+      toDetail() {
+        this.$router.push('/detail')
+      }
     }
   }
 </script>

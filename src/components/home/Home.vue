@@ -11,7 +11,7 @@
     </div>
 </template>
 <script>
-
+import {mapState} from 'vuex'
 import HomeHeader from './pages/Header'
 import HomeSwiper from './pages/Swiper'
 import HomeIcons from './pages/Icons'
@@ -26,18 +26,38 @@ export default {
         return {
             swiperList: [],
             iconsList: [],
-            // hotList: []
+            changeCity:''
+        }
+    },
+    computed: {
+        ...mapState(['city'])
+    },
+    methods:{
+        getHttp() {
+            this.$http.get("/api/dataHome.json") 
+            .then((res) => {
+                const data = res.data.data;
+                data.forEach((item,index) => {
+                    if(item.city == this.city) {
+                        this.swiperList = item.swiperList;
+                        this.iconsList = item.iconsList;
+                        this.hotList = item.hotList;
+                    }
+            });
+            
+        })
         }
     },
     mounted() {
-        this.$http.get("/api/dataHome.json") 
-        .then((res) => {
-            const data = res.data.data[0];
-            this.swiperList = data.swiperList;
-            this.iconsList = data.iconsList;
-            // this.hotList = data.hotList;
-        })
-    }
+        this.changeCity = this.city
+        this.getHttp()
+    },
+    activated() {
+        if(this.changeCity != this.city) {
+            this.getHttp();
+            this.changeCity = this.city;
+        }
+    }    
 }
 </script>
 <style>
