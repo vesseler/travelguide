@@ -25,7 +25,7 @@ Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 import axios from 'axios'
 Vue.prototype.$http = axios
 
-//view' star
+//viewUI star
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 
@@ -34,12 +34,17 @@ Vue.use(ViewUI);
 
 //ViewUI end
 
+//vuex
+import store from './store'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  //vuex必须更router一样挂载到这里，证明全局可用
+  store,
   components: { App },
   template: '<App/>'
 })

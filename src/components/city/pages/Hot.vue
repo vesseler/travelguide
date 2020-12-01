@@ -4,11 +4,15 @@
             热门城市
         </div>
         <ul class="hot-list" >
-            <li class="hot-item" v-for="(item,id) in hotList" :key="id">{{ item.loaction}}</li>
+            <li class="hot-item" v-for="(item,id) in hotList" 
+            :key="id" @click="changeCityName(item.loaction)"
+            >{{ item.loaction }}</li>
         </ul>
     </div>
 </template>
 <script>
+
+import {mapMutations} from 'vuex'
 export default {
     data() {
         return {
@@ -24,6 +28,14 @@ export default {
                 {id:9,loaction:"六盘水"}
             ]
         }
+    },
+    methods:{
+        changeCityName(cityName) {
+            // console.log(cityName);
+            this.changeCity(cityName);
+            this.$router.push('/');
+        },
+        ...mapMutations(["changeCity"])
     }
 }
 </script>
@@ -50,6 +62,7 @@ export default {
     border-right: .02rem solid #ddd;
 }
 .hot-item {
+    position: relative;
     width: 33.33333%;
     text-align: center;
     height: 0.9rem;

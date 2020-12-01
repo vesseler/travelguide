@@ -5,16 +5,22 @@
             输入城市/景点/游玩主题
         </div>
         <div class="header-right" @click="toCity">
-            北京<span class="iconfont" style="font-size:.2rem">&#xe64a;</span>
+            {{ city }}<span class="iconfont" style="font-size:.2rem">&#xe64a;</span>
         </div>
     </div>
 </template>
+
+
 <script>
+import {mapState} from 'vuex'
 export default {
     methods: {
         toCity() {
             this.$router.push("/City")
         }
+    },
+    computed: {
+        ...mapState(['city'])
     }
 }
 </script>
