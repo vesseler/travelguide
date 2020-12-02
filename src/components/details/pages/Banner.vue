@@ -10,7 +10,7 @@
             </div>
         </div>       
 
-        <div class="img-swiper" v-show="displayimg" @click="offswiper">
+        <div class="img-swiper" v-show="displayimg" @click.self="offswiper">
             <img src="https://r.sinaimg.cn/large/tc/mmbiz_qpic_cn/10097dfe86daed0b755023abdf236435.jpg" 
             alt="">
         </div>
@@ -65,8 +65,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
-.img-swiper {
+.img-swiper img{
     width: 100%;
 }
 </style>
