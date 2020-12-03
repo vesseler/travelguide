@@ -8,19 +8,24 @@
         <home-icons :iconsList = 'iconsList'></home-icons>
         <home-loaction></home-loaction>
         <home-activity></home-activity>
+        <home-like></home-like>
+        <home-recommend></home-recommend>
     </div>
 </template>
 <script>
 import {mapState} from 'vuex'
+
 import HomeHeader from './pages/Header'
 import HomeSwiper from './pages/Swiper'
 import HomeIcons from './pages/Icons'
 import HomeLoaction from './pages/Loaction'
 import HomeActivity from './pages/Activity'
+import HomeLike from './pages/Like'
+import HomeRecommend from './pages/recommend'
 
 export default {
     components:{
-        HomeHeader,HomeSwiper,HomeIcons,HomeLoaction,HomeActivity
+        HomeHeader,HomeSwiper,HomeIcons,HomeLoaction,HomeActivity,HomeLike,HomeRecommend
     },
     data() {
         return {

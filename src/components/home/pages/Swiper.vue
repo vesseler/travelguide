@@ -5,14 +5,14 @@
                 <img :src="itme.imgUrl" :alt="itme.alts" 
                 @click="toDetail">
             </swiper-slide>
-            <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+            <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
     </div>
   
 </template>
 
 <script>
-// import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   export default {
     props:['swiperList'],
     // name: 'carrousel',
@@ -23,9 +23,10 @@
     data() {
       return {
         swiperOptions: {
-        //   pagination: {
-        //     el: '.swiper-pagination'
-        //   },
+          pagination: {
+            el: '.swiper-pagination',
+            
+          },
           loop:true
           // Some Swiper option/callback...
         }

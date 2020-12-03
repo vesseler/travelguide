@@ -24,7 +24,7 @@ export default {
         flex: 1;
         font-size: .28rem;
         text-align: center;
-        /* background: red; */
+        background: #fff;
         line-height: .8rem;
     }
 </style>

@@ -16,20 +16,18 @@
 <script>
 export default {
     props:['iconsList'],
+
     data() {
         return {
             swiperOptions: {
                 pagination: {
-                    el: '.swiper-pagination',
-                    type: "custom",
-                    // clickable:true
+                    el: '.swiper-pagination'
+                    
                 },
-                // loop:true,
-                // freeMode:true,
-                // watchSlidesProgress:true
                 // Some Swiper option/callback...
-            }
-            
+                clickable:true
+                    // loop:true
+            }   
         }
     },
     computed: {
@@ -44,8 +42,15 @@ export default {
             });
 
             return pages;
+        },
+        swiper() {
+            return this.$refs.mySwiper.$swiper
         }
-    }
+    },
+    mounted() {
+        console.log('Current Swiper instance object', this.swiper)
+        this.swiper.slideTo(3, 1000, false)
+    }  
 }
 </script>
 
@@ -53,6 +58,8 @@ export default {
     .icons {
         width: 100%;
         overflow: hidden;
+        /* margin-bottom: .28rem; */
+        /* margin-top: .28rem; */
     }
     .icons-item {
         width: 25%;
